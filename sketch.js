@@ -49,8 +49,6 @@ function setColors(i,j){
         currentColor = getNewColor();
         currentObject.topColor = currentColor;
         currentObject.isColorSetTop = true;
-        if(i < 10 && j < 10){
-        console.log("Top",i,j,currentColor)}
         setBottomColors(i,j-1,currentColor);
         if(currentObject.direction){
             setRightColors(i-1,j,currentColor);
@@ -63,8 +61,6 @@ function setColors(i,j){
         currentColor = getNewColor();
         currentObject.bottomColor = currentColor;
         currentObject.isColorSetBottom = true;
-        if(i < 10 && j < 10){
-        console.log("Bottom",i,j,currentColor)}
         setTopColors(i,j+1,currentColor);
         if(!currentObject.direction){
             setRightColors(i-1,j,currentColor);
@@ -85,8 +81,6 @@ function setTopColors(i, j, currentColor){
     }
     currentObject.topColor = currentColor;
     currentObject.isColorSetTop = true;
-    if(i < 10 && j < 10){
-    console.log("Top",i,j,currentColor)}
     if(currentObject.direction){
         setRightColors(i-1,j,currentColor);
     }
@@ -105,8 +99,6 @@ function setBottomColors(i, j, currentColor){
     }
     currentObject.bottomColor = currentColor;
     currentObject.isColorSetBottom = true;
-    if(i < 10 && j < 10){
-    console.log("Bottom",i,j,currentColor)}
     if(!currentObject.direction){
         setRightColors(i-1,j,currentColor);
     }
@@ -126,8 +118,6 @@ function setLeftColors(i, j, currentColor){
         }
         currentObject.bottomColor = currentColor;
         currentObject.isColorSetBottom = true;
-        if(i < 10 && j < 10){
-        console.log("Bottom",i,j,currentColor)}
         setTopColors(i,j+1,currentColor);
     }
     else{
@@ -136,8 +126,6 @@ function setLeftColors(i, j, currentColor){
         }
         currentObject.topColor = currentColor;
         currentObject.isColorSetTop = true;
-        if(i < 10 && j < 10){
-        console.log("Top",i,j,currentColor)}
         setBottomColors(i,j-1,currentColor);
     }
 }
@@ -153,9 +141,6 @@ function setRightColors(i, j, currentColor){
         }
         currentObject.bottomColor = currentColor;
         currentObject.isColorSetBottom = true;
-        if(i < 10 && j < 10){
-            console.log("Bottom",i,j,currentColor)
-        }
         setTopColors(i,j+1,currentColor);
     }
     else{
@@ -164,8 +149,6 @@ function setRightColors(i, j, currentColor){
         }
         currentObject.topColor = currentColor;
         currentObject.isColorSetTop = true;
-        if(i < 10 && j < 10){
-        console.log("Top",i,j,currentColor)}
         setBottomColors(i,j-1,currentColor);
     }
 }
