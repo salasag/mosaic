@@ -3,8 +3,8 @@ var CANVAS_WIDTH  = 1600;
 let FPS = 30;
 let objects = [];
 let isMousePreviouslyPressed = false;
-let objectWidth = 50;
-let objectHeight = 50;
+let objectWidth = 25;
+let objectHeight = 25;
 let init = false;
 
 function setup(){
